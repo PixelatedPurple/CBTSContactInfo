@@ -11,23 +11,23 @@
 
             $dbc = mysqli_connect('localhost','root','aeroplane105','customerdb') or die('Error connecting to MySQL server.'); 
 
-            $from = 'ken@mycompany.com'; 
+            $from = 'tj@cursedbots.xyz'; 
             $subject =$_POST['subject'];
             $text= $_POST['messege']; 
 
             $smtp = array(); 
-            $smtp['host'] = 'ssl://smtp.gmail.com'; 
+            $smtp['host'] = 'ssl://smtp.porkbun.com'; 
             $smtp['port'] = 465; 
             $smtp['auth'] = true; 
-            $smtp['username'] = 'mvyas85@gmail.com'; 
-            $smtp['password'] = 'aeroplane100'; 
+            $smtp['username'] = 'CursedBots'; 
+            $smtp['password'] = 'tlowth88889'; 
 
             $mailer = Mail::factory('smtp', $smtp); 
             $recipients = array(); 
 
             // Set the headers 
             $headers = array(); 
-            $headers['From'] = 'ken@mycompany.com'; 
+            $headers['From'] = 'tj@cursedbots.xyz'; 
             
             $query = "SELECT * FROM contacts"; 
             $result = mysqli_query($dbc, $query) or die('Error querying database.'); 
